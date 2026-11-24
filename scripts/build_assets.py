@@ -84,7 +84,7 @@ STYLE = '''
 @keyframes reveal{0%,6%{opacity:0;transform:translateY(10px)}16%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
 @keyframes bolt{0%,5%{opacity:0}8%{opacity:.95}19%,100%{opacity:0}}
 @keyframes drift{50%{transform:translateY(-7px)}}
-@keyframes deploy{0%{opacity:0;transform:translate(-55px,16px)}12%,92%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(8px,-6px)}}
+@keyframes deploy{0%{opacity:.55;transform:translate(-25px,10px)}12%,92%{opacity:1;transform:translate(0,0)}100%{opacity:.55;transform:translate(8px,-6px)}}
 @keyframes reactor{50%{opacity:.5}}
 @keyframes exhaust{50%{transform:scaleY(.7);opacity:.6}}
 @keyframes shield{0%,65%,100%{transform:rotate(0)}80%{transform:rotate(-20deg)}90%{transform:rotate(14deg)}}

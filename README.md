@@ -10,7 +10,7 @@ I build **agentic AI, safety systems, and full-stack products** where you can tr
 
 <img src="assets/infinity-stones.svg" width="100%" alt="Six stones: connect systems, reason with agents, verify evidence, engineer foundations, recover state, and design for people.">
 
-<a id="the-arsenal"></a>
+## The arsenal
 
 <img src="assets/arsenal-ironman.svg" width="100%" alt="Iron Man: the engineering arsenal. Intelligence needs an engine.">
 
@@ -22,7 +22,7 @@ I build **agentic AI, safety systems, and full-stack products** where you can tr
 | **Data** | PostgreSQL · Neon · MongoDB · SQLite · pgvector |
 | **Delivery** | Docker · GitHub Actions · Vercel · Git |
 
-<a id="featured-missions"></a>
+## Featured missions
 
 <img src="assets/missions-captain.svg" width="100%" alt="Captain America: built with a purpose. My four pinned repositories lead the featured missions.">
 
@@ -111,7 +111,7 @@ The wider collection explores agent containment, permission boundaries, live sys
 
 </details>
 
-<a id="mission-control"></a>
+## Mission control
 
 <img src="assets/telemetry-hulk.svg" width="100%" alt="Hulk punches down: small commits, big impact. Mission control and contribution activity.">
 
@@ -140,7 +140,7 @@ Dates follow GitHub contribution days (UTC). Each cell is the number of credited
 
 <sub>Refreshed daily from GitHub. Project rows show credited public-repository commits over the last 30 days, excluding this profile repository. The time-of-day view uses a labeled sample of public commit timestamps.</sub>
 
-<a id="open-a-channel"></a>
+## Open a channel
 
 <img src="assets/uplink-spiderman.svg" width="100%" alt="Spider-Man hangs from a web: good ideas need a connection. Have a useful problem? Let's build something that holds up.">
 
