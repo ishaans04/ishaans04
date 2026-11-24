@@ -1,7 +1,7 @@
 <img src="assets/hero-thor.svg" width="100%" alt="Ishaan Sharma. Ishaan builds AI that shows its work. Thor arrives with lightning.">
 
 <p align="center">
-<a href="#the-arsenal">Arsenal</a> &nbsp; / &nbsp; <a href="#featured-missions">Featured missions</a> &nbsp; / &nbsp; <a href="#mission-control">Mission control</a> &nbsp; / &nbsp; <a href="#open-a-channel">Open a channel</a>
+<a href="#user-content-the-arsenal">Arsenal</a> &nbsp; / &nbsp; <a href="#user-content-featured-missions">Featured missions</a> &nbsp; / &nbsp; <a href="#user-content-mission-control">Mission control</a> &nbsp; / &nbsp; <a href="#user-content-open-a-channel">Open a channel</a>
 </p>
 
 I build **agentic AI, safety systems, and full-stack products** where you can trace the evidence and understand what happens next. I care about the whole system: the model, the guardrails, and the person using it.
