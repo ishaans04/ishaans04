@@ -58,6 +58,11 @@ def main():
         page.locator('body').evaluate('(e)=>e.classList.remove("light")')
         page.screenshot(path=str(TMP/'mobile.png'),full_page=True)
         assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), 'Horizontal page overflow'
+        # The graphic dashboard has a readable native-text counterpart on phones.
+        assert page.locator('summary').count() == 2
+        page.locator('summary').first.click()
+        assert page.locator('details').first.get_attribute('open') is not None
+        page.locator('summary').first.click()
         # Each SVG is rendered independently for character and typography inspection.
         for asset in (ROOT/'assets').glob('*.svg'):
             page.set_viewport_size({'width':1200,'height':1100})
@@ -66,6 +71,14 @@ def main():
             page.locator('svg').screenshot(path=str(TMP/(asset.stem+'.png')))
             overflow = page.locator('text').evaluate_all('''xs=>xs.map(e=>({text:e.textContent,b:e.getBBox()})).filter(e=>e.b.x < -2 || e.b.x+e.b.width>1202)''')
             assert not overflow, (asset.name, overflow)
+        page.goto((ROOT/'assets/hero-thor.svg').as_uri())
+        before = page.locator('.arrival').evaluate('(e)=>getComputedStyle(e).transform')
+        page.wait_for_timeout(1200)
+        after = page.locator('.arrival').evaluate('(e)=>getComputedStyle(e).transform')
+        assert before != after, 'Thor entrance did not animate'
+        page.emulate_media(reduced_motion='reduce')
+        assert page.locator('.arrival').evaluate('(e)=>getComputedStyle(e).animationName') == 'none'
+        assert page.locator('.name').evaluate('(e)=>getComputedStyle(e).opacity') == '1'
         browser.close()
     print('Verified XML, self-contained assets, rendered images, Markdown tables/details, mobile width, and SVG text bounds.')
     print('Previews:', TMP)

@@ -77,12 +77,14 @@ STYLE = '''
 .smash-fist{animation:punch 7s ease-in-out infinite;transform-origin:40px 170px}
 .impact{animation:impact 7s ease-out infinite;transform-origin:65px 307px}
 .hang{animation:hang 6s ease-in-out infinite;transform-origin:144px 0}
+.deploy{animation:deploy 9s ease-in-out infinite}
 .stone{animation:stone 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 .orbit{animation:orbit 24s linear infinite;transform-origin:190px 225px}
 @keyframes arrival{0%{transform:translateY(-35px);opacity:0}8%,95%{transform:translateY(0);opacity:1}100%{opacity:0}}
 @keyframes reveal{0%,6%{opacity:0;transform:translateY(10px)}16%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
 @keyframes bolt{0%,5%{opacity:0}8%{opacity:.95}19%,100%{opacity:0}}
 @keyframes drift{50%{transform:translateY(-7px)}}
+@keyframes deploy{0%{opacity:0;transform:translate(-55px,16px)}12%,92%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(8px,-6px)}}
 @keyframes reactor{50%{opacity:.5}}
 @keyframes exhaust{50%{transform:scaleY(.7);opacity:.6}}
 @keyframes shield{0%,65%,100%{transform:rotate(0)}80%{transform:rotate(-20deg)}90%{transform:rotate(14deg)}}
@@ -114,7 +116,7 @@ def svg(name, height, title, content, accent="#79dfff"):
 def chapter(num, hero, title, sub, illustration, accent, motion="drift"):
     content = circle(180, 151, 107, "none", accent, 1, opacity=".22")
     content += circle(180, 151, 88, "none", accent, 1, opacity=".12", stroke_dasharray="4 12")
-    content += f'<g transform="translate(65 12) scale(.78)"><g class="{motion}">{illustration}</g></g>'
+    content += f'<g transform="translate(65 12) scale(.78)"><g class="deploy"><g class="{motion}">{illustration}</g></g></g>'
     content += text(365, 63, f"{num} / {hero.upper()}", 17, accent, 600, True, letter_spacing="3")
     content += text(362, 133, title, 58, weight=750, letter_spacing="-2")
     content += text(365, 179, sub, 24, MUTED)
@@ -157,7 +159,6 @@ def build():
 
     spidey = chapter("04", "Spider-Man", "Good ideas need a connection.", "Have a useful problem? Let's build something that holds up.", "", "#ff8b9e")
     spidey += '<g transform="translate(50 0) scale(.8)"><g class="hang">'
-    spidey += path("M153 -10V43", stroke="#c4d8e8", sw=2)
     spidey += '<g transform="translate(0 0)">' + spiderman() + '</g></g></g>'
     svg("uplink-spiderman.svg", 320, "Spider-Man hangs from a web. Connect with Ishaan Sharma.", spidey, "#ff8b9e")
 
