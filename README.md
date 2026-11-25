@@ -22,8 +22,13 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/education-night.svg"><img src="assets/education-day.svg" width="100%" align="top" alt="Education: B.Tech, Information Technology at Maharaja Surajmal Institute of Technology, New Delhi, since August 2024. CGPA 8.5 out of 10, or 3.40 out of 4 on a linear scale. Class of 2028."></picture>
 <!-- RECORD:END -->
 
+<!-- STACK:START -->
 <a id="stack"></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-night.svg"><img src="assets/stack-day.svg" width="100%" alt="Stack: Python, TypeScript, JavaScript, Go, SQL, Java, C++; agentic AI, multi-agent systems, RAG, LangGraph, LangChain, MCP, Pydantic AI; FastAPI, React, Node.js, PostgreSQL, pgvector, MongoDB, Docker, GitHub Actions, Vercel."></picture>
+<details>
+<summary><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-night.svg"><img src="assets/stack-day.svg" width="100%" align="top" alt="Stack: Python, TypeScript, JavaScript, Go, SQL, Java, C++; agentic AI, multi-agent systems, RAG, LangGraph, LangChain, MCP, Pydantic AI; FastAPI, React, Node.js, PostgreSQL, pgvector, MongoDB, Docker, GitHub Actions, Vercel. Tap to open the full hive."></picture></summary>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-hive-night.svg"><img src="assets/stack-hive-day.svg" width="100%" align="top" alt="Full stack. Languages: Python, TypeScript, JavaScript, Go, SQL, Java, C++. AI: Agentic AI, Multi-agent, RAG, LangGraph, LangChain, MCP, Pydantic AI, Claude Code, Codex. Delivery: FastAPI, React, Node.js, PostgreSQL, pgvector, MongoDB, SQLite, Neon, Docker, GitHub Actions, Vercel."></picture>
+</details>
+<!-- STACK:END -->
 
 <img src="assets/divider-2.svg" width="100%" alt="">
 

@@ -17,6 +17,7 @@ Both workflows declare their own write permissions, so the repository default ca
 | `scripts/build_3d.py` | Extruded hero tagline, isometric Square One fort, rotating model globe in the Play panel |
 | `scripts/build_buttons.py` | Keycap buttons in `assets/buttons/` (nav, demos, contact) |
 | `scripts/render_activity.py` | Activity panel, skyline and dividers from `assets/activity.json` |
+| `scripts/build_stack.py` | Stack hive (`assets/stack-hive-*.svg`), the marquee's expand hint and the README block between the STACK markers |
 | `scripts/build_record.py` | About panel, Internship and Education panels, and the README block between the RECORD markers |
 
 `build_3d.py` writes between `<!--3D:name-->` markers, so it is safe to run repeatedly. To change the tagline, edit `TAGLINE` and rerun it.
@@ -24,6 +25,10 @@ Both workflows declare their own write permissions, so the repository default ca
 ## Clickable rows
 
 GitHub allows one link per image, so the About and Internship panels are cut into horizontal slices and each clickable row is its own image. The README gives every slice `align="top"`. That removes the baseline gap GitHub leaves under inline images, so the slices meet edge to edge. To change the record, the CGPA or the internship rows, edit the facts at the top of `build_record.py` and rerun it. The /4 CGPA is computed from the /10 figure.
+
+## Stack hive
+
+The marquee sits in a `<details><summary>`, so a click on it opens the hive and a second click closes it. Edit `STACK` in `build_stack.py` to change the list; the build refuses a technology listed twice. Logos are Simple Icons path data (CC0) saved in `scripts/stack_icons.json`; technologies without a brand mark use line glyphs drawn in the script.
 
 ## Performance rules
 
@@ -53,3 +58,4 @@ Display type is Archivo Black (SIL Open Font License 1.1), subset to capitals, d
     python scripts/build_3d.py
     python scripts/build_buttons.py
     python scripts/build_record.py
+    python scripts/build_stack.py
