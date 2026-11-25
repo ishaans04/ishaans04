@@ -1,6 +1,6 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-night.svg"><img src="assets/hero-day.svg" width="100%" alt="Ishaan Sharma, Creative Technologist. The name denoises out of a field of binary digits. I build and ship AI that shows its work."></picture>
 
-<p align="center"><a href="#about">About</a> · <a href="#stack">Stack</a> · <a href="#work">Work</a> · <a href="#activity">Activity</a> · <a href="#play">Play</a> · <a href="#contact">Contact</a></p>
+<p align="center"><a href="#about"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/about-night.svg"><img src="assets/buttons/about-day.svg" width="16%" alt="About"></picture></a><a href="#stack"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/stack-night.svg"><img src="assets/buttons/stack-day.svg" width="16%" alt="Stack"></picture></a><a href="#work"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/work-night.svg"><img src="assets/buttons/work-day.svg" width="16%" alt="Work"></picture></a><a href="#activity"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/activity-night.svg"><img src="assets/buttons/activity-day.svg" width="16%" alt="Activity"></picture></a><a href="#play"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/play-night.svg"><img src="assets/buttons/play-day.svg" width="16%" alt="Play"></picture></a><a href="#contact"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/contact-night.svg"><img src="assets/buttons/contact-day.svg" width="16%" alt="Contact"></picture></a></p>
 
 <img src="assets/divider-1.svg" width="100%" alt="">
 
@@ -20,7 +20,7 @@
 <a href="https://github.com/ishaans04/HAVEN-august2026"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-haven-night.svg"><img src="assets/work-haven-day.svg" width="100%" alt="Project 05: HAVEN. The human owns the decision."></picture></a>
 <a href="https://github.com/ishaans04/Jury"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-jury-night.svg"><img src="assets/work-jury-day.svg" width="100%" alt="Project 06: The Jury. Don’t build it. Prove it."></picture></a>
 
-<p align="center"><b><a href="https://squareone-eight.vercel.app/">Play Square One ↗</a></b> · <a href="https://havenaugust2026.vercel.app/">HAVEN demo ↗</a></p>
+<p align="center"><a href="https://squareone-eight.vercel.app/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/square-one-night.svg"><img src="assets/buttons/square-one-day.svg" width="40%" alt="Play Square One"></picture></a> <a href="https://havenaugust2026.vercel.app/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/haven-night.svg"><img src="assets/buttons/haven-day.svg" width="40%" alt="HAVEN demo"></picture></a></p>
 
 <details>
 <summary><b>#07 – #16 · The other 10 projects</b></summary>
@@ -73,4 +73,4 @@
 <a id="contact"></a>
 <a href="mailto:sharmaishaaan04@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/contact-night.svg"><img src="assets/contact-day.svg" width="100%" alt="Contact: prompt me. sharmaishaaan04@gmail.com"></picture></a>
 
-<p align="center"><b><a href="mailto:sharmaishaaan04@gmail.com">sharmaishaaan04@gmail.com</a></b> · <b><a href="https://www.linkedin.com/in/ishaan-sharma04/">LinkedIn ↗</a></b></p>
+<p align="center"><a href="mailto:sharmaishaaan04@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/email-night.svg"><img src="assets/buttons/email-day.svg" width="40%" alt="Email sharmaishaaan04@gmail.com"></picture></a> <a href="https://www.linkedin.com/in/ishaan-sharma04/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/buttons/linkedin-night.svg"><img src="assets/buttons/linkedin-day.svg" width="40%" alt="LinkedIn"></picture></a></p>
