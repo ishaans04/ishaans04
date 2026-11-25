@@ -31,10 +31,12 @@ ABOUT_LINES = ('MULTI-AGENT ORCHESTRATOR. I SEND', 'SWARMS OF AI AGENTS INTO THE
 ABOUT_SENTENCE = ('Multi-agent orchestrator. I send swarms of AI agents into the field, make them argue, '
                   'cross-check and iterate until the proof holds up.')
 
+# GitHub renames id="x" to id="user-content-x" and only scrolls to plain #x links on repository pages,
+# so the links name the final id and the browser scrolls natively on the profile page too.
 RECORD = [  # year, title, right-hand note, link target or None
     ('2026', 'WINNER, HORIZON HACKATHON', 'Hoollow · Square One · first attempt', None),
-    ('2026', 'AGENTIC AI INTERN', 'IDCUBE Identification Systems · Jun–Jul  ↓', '#internship'),
-    ('2024 →', 'B.TECH, INFORMATION TECHNOLOGY', 'Maharaja Surajmal Institute of Technology  ↓', '#education'),
+    ('2026', 'AGENTIC AI INTERN', 'IDCUBE Identification Systems · Jun–Jul  ↓', '#user-content-internship'),
+    ('2024 →', 'B.TECH, INFORMATION TECHNOLOGY', 'Maharaja Surajmal Institute of Technology  ↓', '#user-content-education'),
     ('NOW', 'SPONSORSHIP HEAD', 'L.O.O.M. Society, MSIT', None),
 ]
 
