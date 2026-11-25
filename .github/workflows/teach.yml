@@ -1,0 +1,49 @@
+name: Teach the model
+
+on:
+  issues:
+    types: [opened]
+
+concurrency:
+  group: teach-model
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  play:
+    if: startsWith(github.event.issue.title, 'teach|')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retrain on the new point
+        id: game
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+        run: |
+          python -m unittest discover -s scripts -p 'test_teach.py'
+          python scripts/teach.py
+      - name: Commit the board
+        run: |
+          git config user.name 'ishaans04'
+          git config user.email '277194574+ishaans04@users.noreply.github.com'
+          git add README.md assets/teach/state.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Teach the model"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Reply and close
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MESSAGE: ${{ steps.game.outputs.message }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$NUMBER" --repo "$GITHUB_REPOSITORY" --body "$MESSAGE"
+          gh issue close "$NUMBER" --repo "$GITHUB_REPOSITORY"

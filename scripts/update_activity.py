@@ -15,6 +15,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
+from render_activity import readme_line, render_all
+
 ROOT = Path(__file__).resolve().parents[1]
 IST = timezone(timedelta(hours=5, minutes=30))
 LOGIN = os.environ.get("PROFILE_LOGIN", "ishaans04")
@@ -237,15 +239,16 @@ def main():
     data_path = ROOT/'assets/activity.json'
     data = json.loads(data_path.read_text(encoding='utf-8')) if args.offline else fetch()
     # Fetch and render everything before replacing any last-known-good files.
-    image = render(data)
+    images = render_all(data)
     readme_path = ROOT/'README.md'
     readme = readme_path.read_text(encoding='utf-8')
-    content = '<!-- ACTIVITY:START -->\n'+readme_log(data)+'\n<!-- ACTIVITY:END -->'
+    content = '<!-- ACTIVITY:START -->\n'+readme_line(data)+'\n<!-- ACTIVITY:END -->'
     readme, count = re.subn(r'<!-- ACTIVITY:START -->.*?<!-- ACTIVITY:END -->', lambda _: content, readme, flags=re.S)
     if count != 1:
         raise ValueError('Expected exactly one activity block in README')
     data_path.write_text(json.dumps(data, indent=2)+'\n', encoding='utf-8')
-    (ROOT/'assets/activity.svg').write_text(image, encoding='utf-8')
+    for name, content in images.items():
+        (ROOT/'assets'/name).write_text(content, encoding='utf-8')
     readme_path.write_text(readme, encoding='utf-8')
     print(f'Updated {data["login"]}: {data["calendar"]["total"]} contributions; {len(data["projects"]["items"])} active public repos; {data["commit_time_sample"]["count"]} sampled commits')
 

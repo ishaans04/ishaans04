@@ -1,154 +1,75 @@
-<img src="assets/hero-thor.svg" width="100%" alt="Ishaan Sharma. Ishaan builds AI that shows its work. Thor arrives with lightning.">
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-night.svg"><img src="assets/hero-day.svg" width="100%" alt="Ishaan Sharma, Creative Technologist. The name denoises out of a field of binary digits. Ishaan builds AI that shows its work."></picture>
 
-<p align="center">
-<a href="#user-content-the-arsenal">Arsenal</a> &nbsp; / &nbsp; <a href="#user-content-featured-missions">Featured missions</a> &nbsp; / &nbsp; <a href="#user-content-mission-control">Mission control</a> &nbsp; / &nbsp; <a href="#user-content-open-a-channel">Open a channel</a>
-</p>
+<p align="center"><a href="#about">About</a> · <a href="#stack">Stack</a> · <a href="#work">Work</a> · <a href="#activity">Activity</a> · <a href="#play">Play</a> · <a href="#contact">Contact</a></p>
 
-I build **agentic AI, safety systems, and full-stack products** where you can trace the evidence and understand what happens next. I care about the whole system: the model, the guardrails, and the person using it.
+<img src="assets/divider-1.svg" width="100%" alt="">
 
-**B.Tech, Information Technology · MSIT** &nbsp; | &nbsp; Previously **Agentic AI Intern at IDCUBE**
+<a id="about"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/about-night.svg"><img src="assets/about-day.svg" width="100%" alt="About: I build agentic AI, safety systems and full-stack products where you can trace the evidence and see what happens next. Record: winner, Horizon Hackathon 2026; Agentic AI intern at IDCUBE; B.Tech IT at MSIT; sponsorship head, L.O.O.M. Society."></picture>
 
-<img src="assets/infinity-stones.svg" width="100%" alt="Six stones: connect systems, reason with agents, verify evidence, engineer foundations, recover state, and design for people.">
+<a id="stack"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-night.svg"><img src="assets/stack-day.svg" width="100%" alt="Stack: Python, TypeScript, JavaScript, Go, SQL, Java, C++; agentic AI, multi-agent systems, RAG, LangGraph, LangChain, MCP, Pydantic AI; FastAPI, React, Node.js, PostgreSQL, pgvector, MongoDB, Docker, GitHub Actions, Vercel."></picture>
 
-## The arsenal
+<img src="assets/divider-2.svg" width="100%" alt="">
 
-<img src="assets/arsenal-ironman.svg" width="100%" alt="Iron Man: the engineering arsenal. Intelligence needs an engine.">
+<a id="work"></a>
+<a href="https://github.com/ishaans04/Square-One"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-square-one-night.svg"><img src="assets/work-square-one-day.svg" width="100%" alt="Project 01: Square One. Winner, Horizon Hackathon by Hoollow 2026. First attempt, first win."></picture></a>
+<a href="https://github.com/ishaans04/SENTRA"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-sentra-night.svg"><img src="assets/work-sentra-day.svg" width="100%" alt="Project 02: SENTRA. Stop what went wrong. Keep everything else."></picture></a>
+<a href="https://github.com/ishaans04/Ratchet"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-ratchet-night.svg"><img src="assets/work-ratchet-day.svg" width="100%" alt="Project 03: Ratchet. See the blast radius before it runs."></picture></a>
+<a href="https://github.com/ishaans04/Recoup"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-recoup-night.svg"><img src="assets/work-recoup-day.svg" width="100%" alt="Project 04: Recoup. Recovery is a state machine."></picture></a>
+<a href="https://github.com/ishaans04/HAVEN-august2026"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-haven-night.svg"><img src="assets/work-haven-day.svg" width="100%" alt="Project 05: HAVEN. The human owns the decision."></picture></a>
+<a href="https://github.com/ishaans04/Jury"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-jury-night.svg"><img src="assets/work-jury-day.svg" width="100%" alt="Project 06: The Jury. Don’t build it. Prove it."></picture></a>
 
-| Capability | Tools I work with |
-| :--- | :--- |
-| **Languages** | Python · TypeScript · JavaScript · Go · SQL · Java · C++ |
-| **AI & orchestration** | Agentic AI · Multi-agent systems · RAG · LangGraph · LangChain · MCP · Pydantic AI |
-| **Applications** | FastAPI · React · Node.js |
-| **Data** | PostgreSQL · Neon · MongoDB · SQLite · pgvector |
-| **Delivery** | Docker · GitHub Actions · Vercel · Git |
-
-## Featured missions
-
-<img src="assets/missions-captain.svg" width="100%" alt="Captain America: built with a purpose. My four pinned repositories lead the featured missions.">
-
-<a href="https://github.com/ishaans04/Square-One"><img src="assets/square-one-award.svg" width="100%" alt="Square One: Winner of the 2026 Horizon Hackathon by Hoollow. First attempt, first win."></a>
-
-### [Square One](https://github.com/ishaans04/Square-One) · Learn it. Play it. Prove it.
-
-**Winner, Horizon Hackathon by Hoollow (2026) — first attempt, first win.** Turn any skill into a playable **3D fort of 20 rooms**, with adaptive placement and questions built around common mistakes. English, Hindi, and Hinglish support; a prompt cache makes repeat skill generation cost zero LLM calls.
-
-`JavaScript` `React` `Node.js` `Gemini` `Neon / PostgreSQL` `Vercel`
-
-**[Play in your browser ↗](https://squareone-eight.vercel.app/)** &nbsp; · &nbsp; [Explore the source](https://github.com/ishaans04/Square-One)
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### [Recoup](https://github.com/ishaans04/Recoup)
-
-**Recovery is a state machine.** A revenue recovery agent for Razorpay: diagnose failed payments, execute bounded recovery actions, and preserve an append-only audit trail.
-
-`Python` `FastAPI` `Groq` `SQLite`
-
-[Inspect the recovery engine ↗](https://github.com/ishaans04/Recoup)
-
-</td>
-<td width="50%" valign="top">
-
-### [HAVEN](https://github.com/ishaans04/HAVEN-august2026)
-
-**The human owns the decision.** A fatigue-aware safety co-pilot for space crews. AI proposes; deterministic checks evaluate procedures and risks before a human director makes the call.
-
-`Python` `LangChain` `IBM watsonx.ai`
-
-[Open the demo ↗](https://havenaugust2026.vercel.app/) · [Source](https://github.com/ishaans04/HAVEN-august2026)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### [The Jury](https://github.com/ishaans04/Jury)
-
-**Don't build it. Prove it.** Five specialist investigators test startup assumptions against cited evidence. A deterministic jury rules on the record — and can refuse to rule when evidence is thin.
-
-`Python` `FastAPI` `LangGraph` `React` `pgvector`
-
-[Examine the evidence ↗](https://github.com/ishaans04/Jury)
-
-</td>
-<td width="50%" valign="top">
-
-### The engineering thread
-
-**Useful intelligence should be inspectable.** Learning, recovery, human decisions, and evidence: different products, the same standard.
-
-The wider collection explores agent containment, permission boundaries, live systems, and developer tools.
-
-[Browse all repositories ↗](https://github.com/ishaans04?tab=repositories)
-
-</td>
-</tr>
-</table>
+<p align="center"><b><a href="https://squareone-eight.vercel.app/">Play Square One ↗</a></b> · <a href="https://havenaugust2026.vercel.app/">HAVEN demo ↗</a></p>
 
 <details>
-<summary><b>ASSEMBLE THE REST — open the project archive</b></summary>
-
+<summary><b>#07 – #16 · The other 10 projects</b></summary>
 <br>
 
-| Project | The mission | Stack |
-| :--- | :--- | :--- |
-| **[SENTRA](https://github.com/ishaans04/SENTRA)** | Contain unsafe agent behavior, pause only affected work, and recover through voice-guided instructions. | Python · FastAPI · MCP · React |
-| **[RATCHET](https://github.com/ishaans04/Ratchet)** | Check what permission changes make reachable; enforce approvals and preserve an auditable record. | Go · PostgreSQL · OPA · NATS · React |
-| **[GROOT](https://github.com/ishaans04/Groot)** | Turn natural-language business requests into structured, source-backed intelligence missions. | Python · FastAPI |
-| **[Ripple](https://github.com/ishaans04/Ripple)** | Let Twitch chat shape evolution: mutations, natural selection, and a live OBS overlay. | TypeScript · Fastify · PostgreSQL |
-| **[CareGrid](https://github.com/ishaans04/CareGrid)** | Coordinate campus emergency response with incident agents, live dispatch, and Proof-of-Response. | Flutter · Dart · Serverpod |
-| **[EnterpriseGPT](https://github.com/ishaans04/EnterpriseGPT)** | Ground enterprise compliance agents in approved knowledge and connected workflows. | RAG · API integrations · React |
-| **[SQLMind Agent](https://github.com/ishaans04/SQLMind-Agent)** | Explore databases through natural-language SQL, analytics, and generated dashboards. | Python · MCP · NVIDIA NIM |
-| **[SQLMind MCP](https://github.com/ishaans04/SQLMind-MCP)** | Discover schemas and run read-only SQL across multiple databases through MCP. | Python · SQLite · MySQL · PostgreSQL |
-| **[Volt](https://github.com/ishaans04/Volt)** | Optimize EV charging slots with dynamic programming and min-cost flow. | JavaScript · Graph algorithms |
-| **[Face Recognition](https://github.com/ishaans04/Face-Recognition)** | Extract facial embeddings for biometric identity verification. | Python · InsightFace · ArcFace |
-| **[Lumina](https://github.com/ishaans04/Lumina)** | Bring notes, PDF summaries, and multi-model chat into a writing workspace. | Python · LLM integrations |
-| **[Student Management System](https://github.com/ishaans04/Student-Management-System)** | Manage student records in a desktop client-server application. | Java · Swing · JDBC · MySQL |
+- `#07` **[GROOT](https://github.com/ishaans04/Groot)** · Natural language in. Intelligence missions out.
+- `#08` **[Ripple](https://github.com/ishaans04/Ripple)** · Twitch chat shapes evolution: mutations, selection and a live OBS overlay.
+- `#09` **[CareGrid](https://github.com/ishaans04/CareGrid)** · Campus emergency response with incident agents and live dispatch.
+- `#10` **[EnterpriseGPT](https://github.com/ishaans04/EnterpriseGPT)** · Agentic compliance platform grounded in approved knowledge and connected workflows.
+- `#11` **[SQLMind Agent](https://github.com/ishaans04/SQLMind-Agent)** · Natural-language SQL, analytics and generated dashboards.
+- `#12` **[SQLMind MCP](https://github.com/ishaans04/SQLMind-MCP)** · Read-only SQL across multiple databases through MCP.
+- `#13` **[Volt](https://github.com/ishaans04/Volt)** · EV charging slots optimised with dynamic programming and min-cost flow.
+- `#14` **[Face Recognition](https://github.com/ishaans04/Face-Recognition)** · Facial embeddings for identity verification with InsightFace.
+- `#15` **[Lumina](https://github.com/ishaans04/Lumina)** · Notes, PDF summaries and multi-model chat in one writing space.
+- `#16` **[Student Management System](https://github.com/ishaans04/Student-Management-System)** · Desktop client-server records app in Java.
 
-[Explore the complete repository collection ↗](https://github.com/ishaans04?tab=repositories)
+[All repositories ↗](https://github.com/ishaans04?tab=repositories)
 
 </details>
 
-## Mission control
+<img src="assets/divider-3.svg" width="100%" alt="">
 
-<img src="assets/telemetry-hulk.svg" width="100%" alt="Hulk punches down: small commits, big impact. Mission control and contribution activity.">
-
-<img src="assets/activity.svg" width="100%" alt="Refreshed GitHub calendar, daily public commits by project, and observed commit times in India Standard Time.">
+<a id="activity"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/activity-night.svg"><img src="assets/activity-day.svg" width="100%" alt="Activity: what I am building now, contributions over 12 months, commits per project per day for the last 30 days, and peak hours."></picture>
 
 <!-- ACTIVITY:START -->
-**Last telemetry refresh:** 2026-11-25 UTC · [Activity source](assets/activity.json)
-
-<details>
-<summary><b>Open the daily mission log — public commits by project</b></summary>
-
-Dates follow GitHub contribution days (UTC). Each cell is the number of credited commits.
-
-| Public project | 11-19 | 11-20 | 11-21 | 11-22 | 11-23 | 11-24 | 11-25 | 30-day total |
-| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| [Ripple](https://github.com/ishaans04/Ripple) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 259 |
-| [Ratchet](https://github.com/ishaans04/Ratchet) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 153 |
-| [sakararya43-web/Ratchet](https://github.com/sakararya43-web/Ratchet) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 151 |
-| [vighriday/fairfold](https://github.com/vighriday/fairfold) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 110 |
-| [SENTRA](https://github.com/ishaans04/SENTRA) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 60 |
-| [Volt](https://github.com/ishaans04/Volt) | 0 | 4 | 16 | 1 | 0 | 0 | 0 | 21 |
-| [CareGrid](https://github.com/ishaans04/CareGrid) | 0 | 9 | 0 | 0 | 0 | 0 | 0 | 9 |
-
-</details>
+<p align="center"><sub>Refreshed daily from public GitHub data · last refresh 2026-11-24 UTC · <a href="assets/activity.json">raw data</a></sub></p>
 <!-- ACTIVITY:END -->
 
-<sub>Refreshed daily from GitHub. Project rows show credited public-repository commits over the last 30 days, excluding this profile repository. The time-of-day view uses a labeled sample of public commit timestamps.</sub>
+<img src="assets/divider-4.svg" width="100%" alt="">
 
-## Open a channel
+<a id="play"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/play-night.svg"><img src="assets/play-day.svg" width="100%" alt="Play: teach the model. Every tile is a live prediction from a small neural network trained by visitors."></picture>
 
-<img src="assets/uplink-spiderman.svg" width="100%" alt="Spider-Man hangs from a web: good ideas need a connection. Have a useful problem? Let's build something that holds up.">
-
+<!-- TEACH:START -->
+<p align="center"><img src="assets/teach/next-1.svg" width="60%" alt="Your click places a 1"></p>
 <p align="center">
-<b><a href="mailto:sharmaishaaan04@gmail.com">sharmaishaaan04@gmail.com</a></b><br><br>
-<a href="https://www.linkedin.com/in/ishaan-sharma04/">LinkedIn ↗</a> &nbsp; / &nbsp; <a href="https://github.com/ishaans04?tab=repositories">Repositories ↗</a>
+<a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C0&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="A1: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C1&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="B1: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C2&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="C1: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C3&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="D1: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C4&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="E1: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C5&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1l.svg" width="8.2%" alt="F1: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C6&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="G1: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C7&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="H1: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C8&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="I1: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C9&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="J1: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C10&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="K1: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C0%7C11&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="L1: prediction 0"></a><br>
+<a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C0&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="A2: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C1&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="B2: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C2&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/l1.svg" width="8.2%" alt="C2: training point 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C3&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="D2: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C4&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="E2: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C5&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="F2: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C6&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="G2: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C7&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="H2: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C8&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="I2: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C9&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/l0.svg" width="8.2%" alt="J2: training point 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C10&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="K2: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C1%7C11&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="L2: prediction 0"></a><br>
+<a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C0&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1m.svg" width="8.2%" alt="A3: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C1&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="B3: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C2&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="C3: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C3&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="D3: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C4&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="E3: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C5&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="F3: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C6&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1m.svg" width="8.2%" alt="G3: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C7&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0m.svg" width="8.2%" alt="H3: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C8&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="I3: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C9&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="J3: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C10&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="K3: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C2%7C11&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="L3: prediction 0"></a><br>
+<a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C0&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="A4: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C1&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="B4: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C2&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="C4: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C3&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="D4: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C4&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0m.svg" width="8.2%" alt="E4: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C5&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1m.svg" width="8.2%" alt="F4: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C6&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="G4: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C7&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="H4: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C8&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="I4: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C9&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="J4: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C10&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="K4: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C3%7C11&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1m.svg" width="8.2%" alt="L4: prediction 1"></a><br>
+<a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C0&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="A5: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C1&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="B5: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C2&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/l0.svg" width="8.2%" alt="C5: training point 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C3&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="D5: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C4&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="E5: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C5&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="F5: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C6&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1m.svg" width="8.2%" alt="G5: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C7&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="H5: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C8&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="I5: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C9&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/l1.svg" width="8.2%" alt="J5: training point 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C10&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="K5: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C4%7C11&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="L5: prediction 1"></a><br>
+<a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C0&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="A6: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C1&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="B6: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C2&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="C6: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C3&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="D6: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C4&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="E6: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C5&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0h.svg" width="8.2%" alt="F6: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C6&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p0m.svg" width="8.2%" alt="G6: prediction 0"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C7&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="H6: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C8&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="I6: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C9&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="J6: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C10&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="K6: prediction 1"></a><a href="https://github.com/ishaans04/ishaans04/issues/new?title=teach%7C5%7C11&body=Press%20%22Submit%20new%20issue%22.%20A%20GitHub%20Action%20retrains%20the%20network%20and%20redraws%20the%20board%20in%20about%20a%20minute%2C%20then%20closes%20this%20issue."><img src="assets/teach/p1h.svg" width="8.2%" alt="L6: prediction 1"></a>
 </p>
+<p align="center"><sub>Seeded with 4 points. Your move.</sub><br>
+<sub>4 points · 1 teachers · 1 training rounds · loss 0.0001</sub></p>
+<!-- TEACH:END -->
 
-<p align="center"><sub>Bring the problem. I'll bring the curiosity, the code, and the receipts.</sub></p>
+<a id="contact"></a>
+<a href="mailto:sharmaishaaan04@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/contact-night.svg"><img src="assets/contact-day.svg" width="100%" alt="Contact: prompt me. sharmaishaaan04@gmail.com"></picture></a>
 
-<p align="center"><sub>Character renders: <a href="assets/ARTWORK.md">PNGimg & FreePNGimg · artwork credits</a>. Marvel characters © Marvel.</sub></p>
+<p align="center"><b><a href="mailto:sharmaishaaan04@gmail.com">sharmaishaaan04@gmail.com</a></b> · <b><a href="https://www.linkedin.com/in/ishaan-sharma04/">LinkedIn ↗</a></b></p>

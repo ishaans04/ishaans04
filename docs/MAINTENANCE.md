@@ -1,51 +1,29 @@
 # Profile maintenance
 
-The root README is the public profile. All visible artwork is served from this repository. SVG files contain their own CSS animations and embedded character images; they have no scripts, network requests, or external font dependencies. Motion is disabled when the reader prefers reduced motion. The dark panels intentionally retain their palette in either GitHub theme.
+## What updates itself
 
-## Edit the profile
+- **Activity** (`.github/workflows/activity.yml`): daily at 01:17 UTC. Fetches public contribution data, then rewrites `assets/activity-night.svg`, `assets/activity-day.svg`, the four `assets/divider-*.svg` files and the refresh line in the README.
+- **Teach the Model** (`.github/workflows/teach.yml`): runs when someone opens an issue titled `teach|ROW|COL` from a board tile. It adds the point, retrains the network, rewrites the board between the TEACH markers, replies and closes the issue.
 
-Edit `README.md` for project descriptions, links, or stack changes. Keep the four pinned projects first. Additional projects belong in the archive dropdown.
+## Setup
 
-Edit `scripts/build_assets.py`, then run:
+1. Settings > General > Features: keep **Issues** on.
+2. Settings > Actions > General > Workflow permissions: **Read and write permissions**.
+3. Run the activity workflow once from the Actions tab.
 
-```sh
-python scripts/build_assets.py
-```
+## Reset the board
 
-Character sources and attribution are in [the artwork notes](../assets/ARTWORK.md).
+Delete `assets/teach/state.json`; the next move starts again from the four seed points.
 
-## Refresh activity
+## Theme
 
-The workflow runs daily at 01:17 UTC (06:47 IST), or through **Actions → Refresh mission control → Run workflow**. It needs only the repository's built-in token, with `contents: write` permission. No personal access token or other secret is required.
+Every large section ships as `*-night.svg` (dark GitHub theme) and `*-day.svg` (light theme), switched with `<picture>` and `prefers-color-scheme`. Dividers and board tiles carry their own colours and work on both.
 
-For a local refresh with GitHub CLI authentication:
+## Fonts
 
-```sh
-python scripts/update_activity.py
-```
+Display type is Archivo Black (SIL Open Font License 1.1), subset to capitals, digits and punctuation, embedded as base64 in each SVG. `assets/fonts/display-metrics.json` holds glyph advances so the Python renderer can size text.
 
-To rebuild the layout from the committed public dataset without fetching:
+## Local checks
 
-```sh
-python scripts/update_activity.py --offline
-```
-
-- The calendar uses GitHub's own credited contribution calendar and date boundaries.
-- Project rows cover the last 30 UTC contribution dates, including today; they show credited commits, not all branch pushes.
-- Public collaborations retain their owner-qualified names. Same-named repositories are separate projects.
-- Private repositories are filtered before data is saved. Profile maintenance commits are excluded from project rows and sampled commit times.
-- The chart shows the six most active public repositories; the daily log includes all active public repositories returned by GitHub.
-- The time-of-day view samples up to 100 author timestamps from each of the eight most active public repositories, over a 90-day lookback. Duplicate commit hashes are counted once. The highlighted window is the busiest consecutive three hours in IST within that sample.
-- API errors or incomplete contribution pages fail the refresh before replacing the saved dashboard.
-
-The refresh updates only `assets/activity.json`, `assets/activity.svg`, and the marked README activity block. An unchanged refresh creates no commit.
-
-## Verify
-
-The telemetry checks use only Python's standard library:
-
-```sh
-python -m unittest discover -s scripts -p 'test_*.py'
-```
-
-For visual review, install Playwright and have Microsoft Edge available, then run `python scripts/verify_profile.py`. It uses GitHub's Markdown renderer and saves desktop, light-theme, mobile, and individual-asset previews in the ignored `tmp/` directory. It checks SVG structure, image loading, text bounds, details/table rendering, and mobile page overflow.
+    python -m unittest discover -s scripts -p 'test_*.py'
+    python scripts/update_activity.py --offline

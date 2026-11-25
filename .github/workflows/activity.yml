@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - scripts/update_activity.py
+      - scripts/render_activity.py
       - .github/workflows/activity.yml
 
 concurrency:
@@ -25,20 +26,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Fetch public activity and rebuild dashboard
+      - name: Fetch public activity and rebuild the panel
         env:
           GH_TOKEN: ${{ github.token }}
           PROFILE_LOGIN: ishaans04
         run: |
-          python -m unittest discover -s scripts -p 'test_*.py'
+          python -m unittest discover -s scripts -p 'test_activity.py'
           python scripts/update_activity.py
-      - name: Commit changed dashboard
+      - name: Commit changed panel
         run: |
           git config user.name 'ishaans04'
           git config user.email '277194574+ishaans04@users.noreply.github.com'
-          git add assets/activity.svg assets/activity.json README.md
+          git add assets/activity-night.svg assets/activity-day.svg assets/divider-*.svg assets/activity.json README.md
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh contribution mission control"
+            git commit -m "Refresh activity panel"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
