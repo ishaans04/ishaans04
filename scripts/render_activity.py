@@ -89,13 +89,13 @@ def model(data):
     latest = sorted(projects, key=lambda p: (last(p), p['commits']), reverse=True)[0] if projects else None
     hours = data['commit_time_sample']['hours_ist']
     peak = max(range(24), key=lambda i: (sum(hours[(i + j) % 24] for j in range(3)), -i))
-    active = sum(1 for d in data['calendar']['days'] if d['contributionCount'])
-    return mine, projects, dates, last, latest, peak, active
+    recent = sum(d['contributionCount'] for d in data['calendar']['days'][-30:])  # momentum: the calendar ends today
+    return mine, projects, dates, last, latest, peak, recent
 
 
 def activity(theme, data):
     bg, fg = PAL[theme]
-    mine, projects, dates, last, latest, peak, active = model(data)
+    mine, projects, dates, last, latest, peak, recent = model(data)
     n = len(projects)
     yl, rh = 400, 34
     h = yl + max(n, 1) * rh + 110
@@ -110,7 +110,7 @@ def activity(theme, data):
     if latest:
         b.append(t(40, 296, f"{latest['commits']} COMMITS IN 30 DAYS · LAST PUSH {mon(last(latest))}", 13, fg, 700, ls=1.5, cls='fi', style=delay(.5)))
     pk = f'{peak:02d}:00–{(peak + 3) % 24:02d}:00'
-    for i, (v, lb) in enumerate([(f"{data['calendar']['total']:,}", 'CONTRIBUTIONS · 12 MONTHS'), (str(active), 'ACTIVE DAYS · 12 MONTHS'), (pk, 'PEAK HOURS · IST')]):
+    for i, (v, lb) in enumerate([(f"{data['calendar']['total']:,}", 'CONTRIBUTIONS · 12 MONTHS'), (f'{recent:,}', 'CONTRIBUTIONS · LAST 30 DAYS'), (pk, 'PEAK HOURS · IST')]):
         y = 150 + i * 76
         b.append(f'<g class="up" style="{delay(.3 + i * .1)}">' + t(1160, y, v, 50, fg, anchor='end', disp=True) + t(1160, y + 22, lb, 12, fg, 700, 'end', 2) + '</g>')
     b += [rule(330, fg), t(40, 366, 'COMMITS PER PROJECT PER DAY · LAST 30 DAYS', 13, fg, 700, ls=2.5),
@@ -137,7 +137,7 @@ def activity(theme, data):
     for i in (0, 7, 14, 21, 29):
         b.append(t(cx(i), ya, mon(dates[i]), 10, fg, 700, 'middle', 1))
     b += [rule(h - 66, fg), t(40, h - 32, 'THE BINARY BETWEEN SECTIONS IS REAL: MY LAST 44 DAYS OF CONTRIBUTIONS, ONE BYTE PER DAY.', 12, fg, 700, ls=1.2)]
-    title = (f"Activity. Now building {name}. {data['calendar']['total']} contributions in the last 12 months, {active} active days, "
+    title = (f"Activity. Now building {name}. {data['calendar']['total']} contributions in the last 12 months, {recent} in the last 30 days, "
              f'peak hours {pk} IST. Commits per project per day for the last 30 days.')
     return svg(W, h, title, '', ''.join(b))
 
