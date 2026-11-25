@@ -118,22 +118,22 @@ The wider collection explores agent containment, permission boundaries, live sys
 <img src="assets/activity.svg" width="100%" alt="Refreshed GitHub calendar, daily public commits by project, and observed commit times in India Standard Time.">
 
 <!-- ACTIVITY:START -->
-**Last telemetry refresh:** 2026-11-24 UTC · [Activity source](assets/activity.json)
+**Last telemetry refresh:** 2026-11-25 UTC · [Activity source](assets/activity.json)
 
 <details>
 <summary><b>Open the daily mission log — public commits by project</b></summary>
 
 Dates follow GitHub contribution days (UTC). Each cell is the number of credited commits.
 
-| Public project | 11-18 | 11-19 | 11-20 | 11-21 | 11-22 | 11-23 | 11-24 | 30-day total |
+| Public project | 11-19 | 11-20 | 11-21 | 11-22 | 11-23 | 11-24 | 11-25 | 30-day total |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | [Ripple](https://github.com/ishaans04/Ripple) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 259 |
 | [Ratchet](https://github.com/ishaans04/Ratchet) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 153 |
 | [sakararya43-web/Ratchet](https://github.com/sakararya43-web/Ratchet) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 151 |
 | [vighriday/fairfold](https://github.com/vighriday/fairfold) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 110 |
 | [SENTRA](https://github.com/ishaans04/SENTRA) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 60 |
-| [Volt](https://github.com/ishaans04/Volt) | 0 | 0 | 4 | 16 | 1 | 0 | 0 | 21 |
-| [CareGrid](https://github.com/ishaans04/CareGrid) | 0 | 0 | 9 | 0 | 0 | 0 | 0 | 9 |
+| [Volt](https://github.com/ishaans04/Volt) | 0 | 4 | 16 | 1 | 0 | 0 | 0 | 21 |
+| [CareGrid](https://github.com/ishaans04/CareGrid) | 0 | 9 | 0 | 0 | 0 | 0 | 0 | 9 |
 
 </details>
 <!-- ACTIVITY:END -->
