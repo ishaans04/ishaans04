@@ -47,7 +47,7 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/activity-night.svg"><img src="assets/activity-day.svg" width="100%" alt="Activity: what I am building now, contributions over 12 months, commits per project per day for the last 30 days, and peak hours."></picture>
 
 <!-- ACTIVITY:START -->
-<p align="center"><sub>Refreshed daily from public GitHub data · last refresh 2026-11-24 UTC · <a href="assets/activity.json">raw data</a></sub></p>
+<p align="center"><sub>Refreshed daily from public GitHub data · last refresh 2026-11-25 UTC · <a href="assets/activity.json">raw data</a></sub></p>
 <!-- ACTIVITY:END -->
 
 <img src="assets/divider-4.svg" width="100%" alt="">
