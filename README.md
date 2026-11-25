@@ -45,6 +45,7 @@
 
 <a id="activity"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/activity-night.svg"><img src="assets/activity-day.svg" width="100%" alt="Activity: what I am building now, contributions over 12 months, commits per project per day for the last 30 days, and peak hours."></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-night.svg"><img src="assets/skyline-day.svg" width="100%" alt="Contributions in 3D: the last 12 months as an isometric city, one tower per day, rebuilt every night."></picture>
 
 <!-- ACTIVITY:START -->
 <p align="center"><sub>Refreshed daily from public GitHub data · last refresh 2026-11-25 UTC · <a href="assets/activity.json">raw data</a></sub></p>

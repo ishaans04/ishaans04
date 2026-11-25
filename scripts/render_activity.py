@@ -142,6 +142,80 @@ def activity(theme, data):
     return svg(W, h, title, '', ''.join(b))
 
 
+def mix(a, b, k):
+    """Blend hex colour a toward b by k (0 = a, 1 = b)."""
+    ca = [int(a[i:i + 2], 16) for i in (1, 3, 5)]
+    cb = [int(b[i:i + 2], 16) for i in (1, 3, 5)]
+    return '#' + ''.join(f'{round(x + (y - x) * k):02x}' for x, y in zip(ca, cb))
+
+
+def skyline(theme, data):
+    """The contribution calendar as an isometric city: one tower per day, weeks running left to right.
+
+    Oblique projection with week vector U and weekday vector V; drawing weeks back to front and
+    days top to bottom is a correct painter's order for this projection. Towers rise once on
+    load, week by week, then the panel is static.
+    """
+    bg, fg = PAL[theme]
+    days = data['calendar']['days']
+    off = days[0]['weekday']
+    U, V, K = (15.4, 3.4), (-9.6, 5.6), .78
+    top_c, front_c, side_c, flat_c = fg, mix(fg, bg, .42), mix(fg, bg, .66), mix(bg, fg, .17)
+    counts = [d['contributionCount'] for d in days]
+    cmax = max(counts) or 1
+    hmax = 118
+    weeks = (len(days) + off + 6) // 7
+    xmin = min(0, 6 * V[0])
+    xmax = (weeks - 1) * U[0] + U[0] * K
+    ox = (W - (xmax - xmin)) / 2 - xmin
+    oy = 128 + hmax
+
+    def p(w, d, du=0.0, dv=0.0):
+        return ox + (w + du) * U[0] + (d + dv) * V[0], oy + (w + du) * U[1] + (d + dv) * V[1]
+
+    def poly(points, fill):
+        return f'<polygon points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in points)}" fill="{fill}"/>'
+
+    cols = [[] for _ in range(weeks)]
+    best = max(range(len(days)), key=lambda i: (counts[i], i))
+    peak = None
+    for i, day in enumerate(days):
+        w, d = (i + off) // 7, day['weekday']
+        c = counts[i]
+        a, b, cc, dd = p(w, d), p(w, d, K), p(w, d, K, K), p(w, d, 0, K)  # back, right, front, left corners
+        if not c:
+            cols[w].append(poly([a, b, cc, dd], flat_c))
+            continue
+        h = 8 + (hmax - 8) * (c / cmax) ** .5
+        up = lambda q: (q[0], q[1] - h)
+        cols[w].append(poly([dd, cc, up(cc), up(dd)], front_c) + poly([cc, b, up(b), up(cc)], side_c)
+                       + poly([up(a), up(b), up(cc), up(dd)], top_c))
+        if i == best:
+            peak = (up(a)[0] + (U[0] * K + V[0] * K) / 2, up(a)[1] + (U[1] + V[1]) * K / 2)
+    body = [f'<rect width="{W}" height="0" fill="{bg}"/>']
+    body += [f'<g class="up" style="{delay(.25 + w * .028)}">{"".join(c)}</g>' for w, c in enumerate(cols)]
+    seen = set()
+    for i, day in enumerate(days):  # month labels along the front edge
+        m = day['date'][:7]
+        if day['date'][8:10] <= '07' and m not in seen and (i + off) // 7 < weeks - 1:
+            seen.add(m)
+            x, y = p((i + off) // 7, 6, .4, 2.1)
+            body.append(t(f'{x:.1f}', f'{y:.1f}', MON[int(m[5:7]) - 1], 10, fg, 700, 'middle', 1.5))
+    if peak:
+        px, py = peak
+        bd = days[best]
+        body.append(f'<g class="fi" style="{delay(2)}"><rect x="{px - .75:.1f}" y="{py - 46:.1f}" width="1.5" height="40" fill="{fg}"/>'
+                    + t(f'{px:.1f}', f'{py - 54:.1f}', f"BEST DAY · {counts[best]} · {mon(bd['date'])}", 11, fg, 700, 'middle', 1.5) + '</g>')
+    h = int(oy + 52 * U[1] + 6 * V[1] + 120)
+    body[0] = f'<rect width="{W}" height="{h}" fill="{bg}"/>'
+    body.insert(1, t(40, 56, 'CONTRIBUTIONS IN 3D · 12 MONTHS', 13, fg, 700, ls=2.5)
+                + t(1160, 56, f"{data['calendar']['total']:,} TOTAL · ONE TOWER PER DAY", 13, fg, 700, 'end', 2.5) + rule(76, fg))
+    body += [rule(h - 66, fg), t(40, h - 32, 'HEIGHT = √CONTRIBUTIONS. REBUILT EVERY NIGHT FROM PUBLIC GITHUB DATA.', 12, fg, 700, ls=1.2)]
+    title = (f"Contributions in 3D: the last 12 months as an isometric city, one tower per day. "
+             f"{data['calendar']['total']} contributions; best day {counts[best]} on {days[best]['date']}.")
+    return svg(W, h, title, '', ''.join(body), font=False)
+
+
 def dividers(data):
     days = data['calendar']['days'][-44:]
     out = []
@@ -162,6 +236,7 @@ def dividers(data):
 
 def render_all(data):
     files = {f'activity-{th}.svg': activity(th, data) for th in ('night', 'day')}
+    files.update({f'skyline-{th}.svg': skyline(th, data) for th in ('night', 'day')})
     for i, s in enumerate(dividers(data), 1):
         files[f'divider-{i}.svg'] = s
     return files
