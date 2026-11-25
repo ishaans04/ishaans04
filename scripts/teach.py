@@ -160,12 +160,18 @@ def render(state):
                          f'<img src="assets/teach/{name}.svg" width="8.2%" alt="{LETTERS[c]}{r + 1}: {describe(name)}"></a>')
         rows.append(''.join(cells))
     n = state['next']
+
+    def count(k, word):
+        return f'{k} {word}' + ('' if k == 1 else 's')
+
+    stats = ' · '.join([count(len(state['points']), 'point'), count(len(state['teachers']), 'teacher'),
+                        count(state['rounds'], 'training round'), f'loss {state["loss"]}'])
     return '\n'.join([
         '<!-- TEACH:START -->',
         f'<p align="center"><img src="assets/teach/next-{n}.svg" width="60%" alt="Your click places a {n}"></p>',
         '<p align="center">', '<br>\n'.join(rows), '</p>',
         f'<p align="center"><sub>{state["message"]}</sub><br>',
-        f'<sub>{len(state["points"])} points · {len(state["teachers"])} teachers · {state["rounds"]} training rounds · loss {state["loss"]}</sub></p>',
+        f'<sub>{stats}</sub></p>',
         '<!-- TEACH:END -->'])
 
 

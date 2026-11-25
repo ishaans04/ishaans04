@@ -1,29 +1,48 @@
 # Profile maintenance
 
+Everything is static SVG + CSS: no JavaScript, no external services, Python standard library only.
+
 ## What updates itself
 
-- **Activity** (`.github/workflows/activity.yml`): daily at 01:17 UTC. Fetches public contribution data, then rewrites `assets/activity-night.svg`, `assets/activity-day.svg`, the four `assets/divider-*.svg` files and the refresh line in the README.
-- **Teach the Model** (`.github/workflows/teach.yml`): runs when someone opens an issue titled `teach|ROW|COL` from a board tile. It adds the point, retrains the network, rewrites the board between the TEACH markers, replies and closes the issue.
+- **Activity** (`.github/workflows/activity.yml`): runs daily at 01:17 UTC. It fetches public contribution data, then rewrites `assets/activity-*.svg`, the 3D contribution skyline `assets/skyline-*.svg`, the four `assets/divider-*.svg` files and the refresh line in the README.
+- **Teach the Model** (`.github/workflows/teach.yml`): runs when someone opens an issue titled `teach|ROW|COL` from a board tile. It adds the point, retrains the network, rewrites the board between the TEACH markers, replies to the issue and closes it.
 
-## Setup
+Both workflows declare their own write permissions, so the repository default can stay read-only. Keep **Issues** on (Settings > General > Features).
 
-1. Settings > General > Features: keep **Issues** on.
-2. Settings > Actions > General > Workflow permissions: **Read and write permissions**.
-3. Run the activity workflow once from the Actions tab.
+## Built by hand (rerun after editing)
+
+| Script | Builds |
+| --- | --- |
+| `scripts/build_3d.py` | Extruded hero tagline, isometric Square One fort, rotating model globe in the Play panel |
+| `scripts/build_buttons.py` | Keycap buttons in `assets/buttons/` (nav, demos, contact) |
+| `scripts/render_activity.py` | Activity panel, skyline and dividers from `assets/activity.json` |
+
+`build_3d.py` writes between `<!--3D:name-->` markers, so it is safe to run repeatedly. To change the tagline, edit `TAGLINE` and rerun it.
+
+## Performance rules
+
+Animated panels must stay cheap, because GitHub renders every panel as an `<img>` and browsers redraw the whole image on each animation frame.
+
+- Animate only `transform` and `opacity`. No filters, blur, masks or animated gradients.
+- Prefer one animation per group over one per element. The globe spins 11 whole rings, each one dotted stroke, instead of animating ~200 dots; that cut its main-thread time by about 4x.
+- Entrance animations run once and stop.
+- Every panel honours `prefers-reduced-motion`.
 
 ## Reset the board
 
-Delete `assets/teach/state.json`; the next move starts again from the four seed points.
+Delete `assets/teach/state.json`. The next move starts again from the four seed points.
 
 ## Theme
 
-Every large section ships as `*-night.svg` (dark GitHub theme) and `*-day.svg` (light theme), switched with `<picture>` and `prefers-color-scheme`. Dividers and board tiles carry their own colours and work on both.
+Every large section ships as `*-night.svg` (dark GitHub theme) and `*-day.svg` (light theme, inverted palette), switched with `<picture>` and `prefers-color-scheme`. Dividers and board tiles carry their own colours and work on both.
 
 ## Fonts
 
-Display type is Archivo Black (SIL Open Font License 1.1), subset to capitals, digits and punctuation, embedded as base64 in each SVG. `assets/fonts/display-metrics.json` holds glyph advances so the Python renderer can size text.
+Display type is Archivo Black (SIL Open Font License 1.1), subset to capitals, digits and punctuation, embedded as base64 in each SVG. `assets/fonts/display-metrics.json` holds glyph advances so the renderers can size text.
 
 ## Local checks
 
     python -m unittest discover -s scripts -p 'test_*.py'
     python scripts/update_activity.py --offline
+    python scripts/build_3d.py
+    python scripts/build_buttons.py
