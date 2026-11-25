@@ -1,6 +1,6 @@
 """Add the 3D layer to the static profile panels. Standard library only.
 
-  * hero      extruded tagline: "I BUILD AND SHIP AI / THAT SHOWS ITS WORK."
+  * hero      extruded tagline (TAGLINE), sized down only if a line would overrun
   * fort      Square One's 20 rooms as an isometric fort (rooms still unlock in order)
   * orb       a rotating dot-matrix sphere in the Play panel
 
@@ -68,19 +68,21 @@ def add_css(svg, css):
 
 # ---------------------------------------------------------------- hero tagline
 
-TAGLINE = ('I BUILD AND SHIP AI', 'THAT SHOWS ITS WORK.')
-HERO_TITLE = ('Ishaan Sharma, Creative Technologist. The name denoises out of a field of binary digits. '
-              'I build and ship AI that shows its work.')
+TAGLINE = ('I BUILD AI, THEN BEND IT', 'TILL IT SHOWS ITS WORK.')
+TAGLINE_WIDTH = 1130  # widest the face may run from x=36 and still hold the right margin
+HERO_TITLE = ('Ishaan Sharma, multi-agent orchestrator. The name denoises out of a field of binary digits. '
+              'I build AI, then bend it till it shows its work. Open to internships, remote or on-site in India.')
 
 
 def hero(svg):
     bg, fg = colours(svg)
     depth = 7
+    size = min(85, int(TAGLINE_WIDTH * 85 / max(measure(line, 85) for line in TAGLINE)))
     out = []
     for i, line in enumerate(TAGLINE):
         top, base, delay = 682 + i * 83, 750 + i * 83, 2.7 + i * .12
         out.append(f'<clipPath id="tg{i}"><rect x="0" y="{top}" width="1200" height="{73 + depth + 2}"/></clipPath>'
-                   f'<g clip-path="url(#tg{i})" font-family="{DISP}" font-size="85" font-weight="900">')
+                   f'<g clip-path="url(#tg{i})" font-family="{DISP}" font-size="{size}" font-weight="900">')
         # Extrusion: stacked copies stepping back from the face, darkest at the back.
         for k in range(depth, 0, -1):
             shade = mix(fg, bg, .42 + .05 * k)
