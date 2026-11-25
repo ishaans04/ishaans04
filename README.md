@@ -1,4 +1,4 @@
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-night.svg"><img src="assets/hero-day.svg" width="100%" alt="Ishaan Sharma, Creative Technologist. The name denoises out of a field of binary digits. Ishaan builds AI that shows its work."></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-night.svg"><img src="assets/hero-day.svg" width="100%" alt="Ishaan Sharma, Creative Technologist. The name denoises out of a field of binary digits. I build and ship AI that shows its work."></picture>
 
 <p align="center"><a href="#about">About</a> · <a href="#stack">Stack</a> · <a href="#work">Work</a> · <a href="#activity">Activity</a> · <a href="#play">Play</a> · <a href="#contact">Contact</a></p>
 
@@ -13,7 +13,7 @@
 <img src="assets/divider-2.svg" width="100%" alt="">
 
 <a id="work"></a>
-<a href="https://github.com/ishaans04/Square-One"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-square-one-night.svg"><img src="assets/work-square-one-day.svg" width="100%" alt="Project 01: Square One. Winner, Horizon Hackathon by Hoollow 2026. First attempt, first win."></picture></a>
+<a href="https://github.com/ishaans04/Square-One"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-square-one-night.svg"><img src="assets/work-square-one-day.svg" width="100%" alt="Project 01: Square One. Winner, Horizon Hackathon by Hoollow 2026. First attempt, first win. An isometric fort of 20 rooms unlocks room by room."></picture></a>
 <a href="https://github.com/ishaans04/SENTRA"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-sentra-night.svg"><img src="assets/work-sentra-day.svg" width="100%" alt="Project 02: SENTRA. Stop what went wrong. Keep everything else."></picture></a>
 <a href="https://github.com/ishaans04/Ratchet"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-ratchet-night.svg"><img src="assets/work-ratchet-day.svg" width="100%" alt="Project 03: Ratchet. See the blast radius before it runs."></picture></a>
 <a href="https://github.com/ishaans04/Recoup"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-recoup-night.svg"><img src="assets/work-recoup-day.svg" width="100%" alt="Project 04: Recoup. Recovery is a state machine."></picture></a>
@@ -53,7 +53,7 @@
 <img src="assets/divider-4.svg" width="100%" alt="">
 
 <a id="play"></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/play-night.svg"><img src="assets/play-day.svg" width="100%" alt="Play: teach the model. Every tile is a live prediction from a small neural network trained by visitors."></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/play-night.svg"><img src="assets/play-day.svg" width="100%" alt="Play: teach the model. Every tile is a live prediction from a small neural network trained by visitors. A dot-matrix globe of the model turns beside it."></picture>
 
 <!-- TEACH:START -->
 <p align="center"><img src="assets/teach/next-1.svg" width="60%" alt="Your click places a 1"></p>
