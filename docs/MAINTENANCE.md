@@ -5,6 +5,7 @@ Everything is static SVG + CSS: no JavaScript, no external services, Python stan
 ## What updates itself
 
 - **Activity** (`.github/workflows/activity.yml`): runs daily at 01:17 UTC. It fetches public contribution data, then rewrites `assets/activity-*.svg`, the 3D contribution skyline `assets/skyline-*.svg`, the four `assets/divider-*.svg` files and the refresh line in the README.
+- **Education** (same workflow): reruns `scripts/build_record.py` so time enrolled and year of study stay current. A failure here never blocks the activity refresh.
 - **Teach the Model** (`.github/workflows/teach.yml`): runs when someone opens an issue titled `teach|ROW|COL` from a board tile. It adds the point, retrains the network, rewrites the board between the TEACH markers, replies to the issue and closes it.
 
 Both workflows declare their own write permissions, so the repository default can stay read-only. Keep **Issues** on (Settings > General > Features).
@@ -16,8 +17,13 @@ Both workflows declare their own write permissions, so the repository default ca
 | `scripts/build_3d.py` | Extruded hero tagline, isometric Square One fort, rotating model globe in the Play panel |
 | `scripts/build_buttons.py` | Keycap buttons in `assets/buttons/` (nav, demos, contact) |
 | `scripts/render_activity.py` | Activity panel, skyline and dividers from `assets/activity.json` |
+| `scripts/build_record.py` | About panel, Internship and Education panels, and the README block between the RECORD markers |
 
 `build_3d.py` writes between `<!--3D:name-->` markers, so it is safe to run repeatedly. To change the tagline, edit `TAGLINE` and rerun it.
+
+## Clickable rows
+
+GitHub allows one link per image, so the About and Internship panels are cut into horizontal slices and each clickable row is its own image. The README gives every slice `align="top"`. That removes the baseline gap GitHub leaves under inline images, so the slices meet edge to edge. To change the record, the CGPA or the internship rows, edit the facts at the top of `build_record.py` and rerun it. The /4 CGPA is computed from the /10 figure.
 
 ## Performance rules
 
@@ -46,3 +52,4 @@ Display type is Archivo Black (SIL Open Font License 1.1), subset to capitals, d
     python scripts/update_activity.py --offline
     python scripts/build_3d.py
     python scripts/build_buttons.py
+    python scripts/build_record.py

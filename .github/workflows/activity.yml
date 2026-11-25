@@ -33,11 +33,16 @@ jobs:
         run: |
           python -m unittest discover -s scripts -p 'test_activity.py'
           python scripts/update_activity.py
+      - name: Rebuild the education panel (time enrolled moves daily)
+        continue-on-error: true
+        run: |
+          python -m unittest discover -s scripts -p 'test_record.py'
+          python scripts/build_record.py
       - name: Commit changed panel
         run: |
           git config user.name 'ishaans04'
           git config user.email '277194574+ishaans04@users.noreply.github.com'
-          git add assets/activity-night.svg assets/activity-day.svg assets/skyline-night.svg assets/skyline-day.svg assets/divider-*.svg assets/activity.json README.md
+          git add assets/activity-night.svg assets/activity-day.svg assets/skyline-night.svg assets/skyline-day.svg assets/divider-*.svg assets/activity.json assets/about-*.svg assets/internship-*.svg assets/education-*.svg README.md
           if ! git diff --cached --quiet; then
             git commit -m "Refresh activity panel"
             git pull --rebase origin main

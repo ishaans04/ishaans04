@@ -4,8 +4,23 @@
 
 <img src="assets/divider-1.svg" width="100%" alt="">
 
+<!-- RECORD:START -->
 <a id="about"></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/about-night.svg"><img src="assets/about-day.svg" width="100%" alt="About: I build agentic AI, safety systems and full-stack products where you can trace the evidence and see what happens next. Record: winner, Horizon Hackathon 2026; Agentic AI intern at IDCUBE; B.Tech IT at MSIT; sponsorship head, L.O.O.M. Society."></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/about-night.svg"><img src="assets/about-day.svg" width="100%" align="top" alt="About: Multi-agent orchestrator. I send swarms of AI agents into the field, make them argue, cross-check and iterate until the proof holds up. Record: winner, Horizon Hackathon 2026 (Hoollow, Square One, first attempt)."></picture>
+<a href="#internship"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/about-intern-night.svg"><img src="assets/about-intern-day.svg" width="100%" align="top" alt="2026: Agentic AI intern, IDCUBE Identification Systems, June to July. Opens the internship panel."></picture></a>
+<a href="#education"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/about-btech-night.svg"><img src="assets/about-btech-day.svg" width="100%" align="top" alt="2024 onward: B.Tech, Information Technology, Maharaja Surajmal Institute of Technology. Opens the education panel."></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/about-lead-night.svg"><img src="assets/about-lead-day.svg" width="100%" align="top" alt="Now: sponsorship head, L.O.O.M. Society, MSIT."></picture>
+
+<a id="internship"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/internship-night.svg"><img src="assets/internship-day.svg" width="100%" align="top" alt="Internship: Agentic AI intern at IDCUBE Identification Systems, June to July 2026. Two months, one agentic platform, shipped end to end. What I built:"></picture>
+<a href="https://github.com/ishaans04/EnterpriseGPT"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/internship-1-night.svg"><img src="assets/internship-1-day.svg" width="100%" align="top" alt="01 EnterpriseGPT: Drove end-to-end development and deployment of an agentic AI compliance platform. Opens the repository."></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/internship-2-night.svg"><img src="assets/internship-2-day.svg" width="100%" align="top" alt="02 Two AI agents: Built on Purple Fabric with RAG and API integrations to automate compliance workflows."></picture>
+<a href="https://github.com/ishaans04/Face-Recognition"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/internship-3-night.svg"><img src="assets/internship-3-day.svg" width="100%" align="top" alt="03 Face recognition: Developed and trained a face detection and recognition model on open-source InsightFace (ArcFace). Opens the repository."></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/internship-end-night.svg"><img src="assets/internship-end-day.svg" width="100%" align="top" alt="Stack: Purple Fabric, RAG, API integration, React, TypeScript, InsightFace."></picture>
+
+<a id="education"></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/education-night.svg"><img src="assets/education-day.svg" width="100%" align="top" alt="Education: B.Tech, Information Technology at Maharaja Surajmal Institute of Technology, New Delhi, since August 2024. CGPA 8.5 out of 10, or 3.40 out of 4 on a linear scale. Class of 2028."></picture>
+<!-- RECORD:END -->
 
 <a id="stack"></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-night.svg"><img src="assets/stack-day.svg" width="100%" alt="Stack: Python, TypeScript, JavaScript, Go, SQL, Java, C++; agentic AI, multi-agent systems, RAG, LangGraph, LangChain, MCP, Pydantic AI; FastAPI, React, Node.js, PostgreSQL, pgvector, MongoDB, Docker, GitHub Actions, Vercel."></picture>
