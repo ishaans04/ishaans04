@@ -68,7 +68,7 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/skyline-night.svg"><img src="assets/skyline-day.svg" width="100%" alt="Contributions in 3D: the last 12 months as an isometric city, one tower per day, rebuilt every night."></picture>
 
 <!-- ACTIVITY:START -->
-<p align="center"><sub>Refreshed daily from public GitHub data · last refresh 2026-11-26 UTC · <a href="assets/activity.json">raw data</a></sub></p>
+<p align="center"><sub>Refreshed daily from public GitHub data · last refresh 2026-11-27 UTC · <a href="assets/activity.json">raw data</a></sub></p>
 <!-- ACTIVITY:END -->
 
 <img src="assets/divider-4.svg" width="100%" alt="">
